@@ -1,0 +1,11 @@
+# Upload only what the production build needs (see docs/DEPLOY.md). Everything else -
+# raw Higgsfield downloads, Blender scenes and renders, QA captures, research, archives,
+# local tooling and config - stays on this machine and in git.
+/*
+!/index.html
+!/vite.config.js
+!/vercel.json
+!/package.json
+!/package-lock.json
+!/src
+!/public

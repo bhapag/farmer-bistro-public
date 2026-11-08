@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Farmer Bistro — Food truck, Dugri Phase 2, Ludhiana (design demo)</title>
+  <meta name="description" content="Design demonstration for The Farmer Bistro, the red food truck serving burgers, wraps, buckets and shakes in Dugri Phase 2, Ludhiana." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#120f0e" />
+  <link rel="icon" href="/brand/favicon.png" />
+  <!-- self-hosted fonts (SIL OFL); the two used above the fold are preloaded -->
+  <link rel="preload" href="/fonts/bricolage-display.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="/media/hf-v4/stills/hero.webp" imagesrcset="/media/hf-v4/stills/hero-800.webp 800w, /media/hf-v4/stills/hero.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+  <!-- storyboard of the scroll story (small frames, whole story): starts with the page, after the poster -->
+  <link rel="preload" href="/media/hf-v4/preview/pack-0.bin" as="fetch" crossorigin="anonymous" fetchpriority="low" />
+  <!-- before first paint: "motion" turns on the scroll runway; removed again if the sequence fails -->
+  <script>document.documentElement.classList.add("js");if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("motion","is-loading");setTimeout(function(){document.documentElement.classList.remove("is-loading")},2500)}</script>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="The Farmer Bistro, back to top">
+      <img src="/brand/logo-96.webp" srcset="/brand/logo-96.webp 1x, /brand/logo-192.webp 2x, /brand/logo-400.webp 4x" width="52" height="43" alt="" />
+      <span>The Farmer Bistro</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#truck">The truck</a></li>
+        <li><a href="#find">Find us</a></li>
+      </ul>
+    </nav>
+    <span class="nav__demo" title="Concept website, not the official site">Demo</span>
+  </header>
+
+  <main id="top">
+    <!-- Scroll story. Canvas paints pre-rendered 3D frames; all copy is real HTML. -->
+    <section class="story" id="story" aria-label="A burger from The Farmer Bistro, from first look to boxed meal">
+      <div class="stage" data-stage>
+        <div class="stage__band" data-band>
+        <img class="stage__poster" src="/media/hf-v4/stills/hero.webp" width="1600" height="900" fetchpriority="high"
+             srcset="/media/hf-v4/stills/hero-800.webp 800w, /media/hf-v4/stills/hero.webp 1600w" sizes="100vw"
+             onerror="this.closest('[data-stage]').classList.add('is-fallback')"
+             alt="Crispy chicken burger with melted cheese, lettuce and spicy mayo on a sesame bun, on a dark counter" />
+        <canvas class="stage__canvas" data-canvas aria-hidden="true"></canvas>
+        </div>
+        <div class="stage__shade" aria-hidden="true"></div>
+
+        <div class="beat beat--hero" data-beat="hero">
+          <p class="eyebrow rise"><svg class="eyebrow__truck" viewBox="0 0 132 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 46V14a4 4 0 0 1 4-4h70a4 4 0 0 1 4 4v32"/><path d="M84 22h22l16 14v10h-4M84 46h12M6 46h10M36 46h42"/><path d="M18 20h50v14H18z"/><circle cx="26" cy="48" r="7"/><circle cx="106" cy="48" r="7"/></svg>Food truck · Dugri Phase 2, Ludhiana</p>
+          <h1 class="hero__title split" data-split>Crunch you can hear from the truck window.</h1>
+          <p class="hero__lede rise" style="--base:520ms">Zinger burgers, wraps, chicken buckets and shakes from the red truck with the farmer on the side.</p>
+          <div class="hero__actions rise" style="--base:640ms">
+            <a class="btn btn--primary" href="#menu">View menu</a>
+            <a class="btn btn--ghost" href="#find">Find the truck</a>
+          </div>
+          <p class="hero__hint" aria-hidden="true"><span class="hint-line"></span>Scroll to open it up</p>
+        </div>
+
+        <div class="beat beat--layers" data-beat="layers">
+          <p class="beat__kicker">Layer by layer</p>
+          <p class="beat__title">The top bun lifts to show the cheese and a thick, crunchy fillet.</p>
+        </div>
+
+        <div class="beat beat--stack" data-beat="stack">
+          <p class="beat__kicker">Back together</p>
+          <p class="beat__title">Stacked again, then boxed with the sides.</p>
+        </div>
+
+        <div class="beat beat--meal" data-beat="meal">
+          <p class="beat__kicker">Make it a meal</p>
+          <p class="beat__title">Most burgers on the board also have a meal price.</p>
+          <p class="beat__note">Farmer Zinger ₹200 · as a meal ₹295 <span>(prices to confirm)</span></p>
+        </div>
+
+        <div class="beat beat--close" data-beat="close">
+          <p class="beat__kicker">Boxed at the window</p>
+          <p class="beat__title">Here's what's on the board.</p>
+          <a class="btn btn--primary" href="#menu">See the full menu</a>
+        </div>
+
+        <p class="stage__label">AI-generated illustration, not a photo of the Bistro's food</p>
+        <a class="stage__skip" href="#menu" data-skip>Skip to the menu</a>
+        <div class="progress" aria-hidden="true"><span data-progress></span></div>
+      </div>
+      <!-- shown instead of the scroll sequence when the visitor prefers reduced motion -->
+      <div class="story__stills">
+        <figure><img src="/media/hf-v4/stills/layers.webp" width="1600" height="900" loading="lazy" alt="The same burger with its layers lifted apart: top bun, spicy mayo, lettuce, cheese, crispy fillet, bottom bun" /><figcaption>Layer by layer</figcaption></figure>
+        <figure><img src="/media/hf-v4/stills/meal.webp" width="1600" height="900" loading="lazy" alt="A closed red Farmer Bistro burger box on a red tray with fries, chicken strips and a cola" /><figcaption>Boxed, with fries, strips and a cola</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">The board</p>
+          <h2 id="menu-title" class="section-title">Menu</h2>
+          <p class="menu__note" data-menu-note><!--menu:note--></p>
+        </header>
+
+        <ol class="lineup" data-lineup aria-label="Three to start with"><!--menu:lineup--></ol>
+
+        <div class="menu__tabs" role="tablist" aria-label="Menu categories" data-tabs hidden><!--menu:tabs--></div>
+        <div data-panels><!--menu:panels--></div>
+      </div>
+    </section>
+
+    <section class="truck" id="truck" aria-labelledby="truck-title">
+      <div class="wrap truck__grid">
+        <figure class="truck__hero">
+          <img src="/photos/truck-night.webp" srcset="/photos/truck-night-540.webp 540w, /photos/truck-night.webp 1080w"
+               sizes="(min-width: 900px) 42vw, 92vw" width="1080" height="1360" loading="lazy"
+               alt="The Farmer Bistro's red food truck at dusk, illuminated logo of a turbaned farmer and menu boards lit up" />
+          <figcaption>At dusk, with the boards lit. Photo from the Bistro's Google listing.</figcaption>
+        </figure>
+        <div class="truck__copy">
+          <p class="eyebrow">The truck</p>
+          <h2 id="truck-title" class="section-title">Look for the red truck.</h2>
+          <p>The Farmer Bistro cooks out of a bright red food truck. Big white and yellow letters run across the roof, the turbaned farmer sits on the side panel, and the name is written again in Gurmukhi just under the roofline:</p>
+          <p class="gurmukhi" lang="pa">ਦਾ ਫਾਰਮਰ ਬਿਸਟਰੋ</p>
+          <p>You order at the window, and there are tables out front.</p>
+          <div class="truck__pair">
+            <figure>
+              <img src="/photos/truck-day.webp" width="700" height="350" loading="lazy"
+                   alt="The red truck in daylight with tables and stools in front" />
+              <figcaption>Daytime, from the Bistro's own listing.</figcaption>
+            </figure>
+            <figure>
+              <img src="/photos/burger-real-570.webp" srcset="/photos/burger-real-570.webp 570w, /photos/burger-real.webp 1140w"
+                   sizes="(min-width: 900px) 20vw, 45vw" width="1140" height="1099" loading="lazy"
+                   alt="A real crispy chicken burger with lettuce and orange sauce, photographed by the Bistro" />
+              <figcaption>The real thing, as the Bistro photographed it.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="find" id="find" aria-labelledby="find-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Find us</p>
+          <h2 id="find-title" class="section-title">Three trucks in three places.</h2>
+          <p class="find__lede">These are the outlets listed on the Bistro's Instagram. Each is a separate truck, so check which one you're heading to.</p>
+        </header>
+        <ul class="spots">
+          <li class="spot spot--main">
+            <p class="spot__tag">Featured in this demo</p>
+            <h3>Dugri Phase 2</h3>
+            <p class="spot__addr">SCF 271, Phase 2, Dugri, Ludhiana</p>
+            <p class="spot__meta">Hours and phone number to be confirmed.</p>
+            <a class="btn btn--small" href="https://www.google.com/maps/search/?api=1&query=The+Farmer+Bistro+SCF+271+Phase+2+Dugri+Ludhiana" target="_blank" rel="noopener">Open in Google Maps</a>
+          </li>
+          <li class="spot">
+            <h3>Gill Pind</h3>
+            <p class="spot__addr">Truck shop 79, MCD Market, Gill Pind</p>
+            <p class="spot__meta">Listed on Instagram. Details to be confirmed.</p>
+          </li>
+          <li class="spot">
+            <h3>Raikot</h3>
+            <p class="spot__addr">Truck shop no. 7, near Hari Singh Nalwa Chowk, Raikot</p>
+            <p class="spot__meta">Listed on Instagram. Details to be confirmed.</p>
+          </li>
+        </ul>
+        <a class="social" href="https://www.instagram.com/the_farmer_bistro_/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+          <span>@the_farmer_bistro_ on Instagram</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__brand">
+        <img src="/brand/logo-192.webp" srcset="/brand/logo-192.webp 1x, /brand/logo-400.webp 2x" width="120" height="100" alt="The Farmer Bistro logo: a turbaned farmer over a burger bun" loading="lazy" />
+        <svg class="truck-mark" viewBox="0 0 132 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 46V14a4 4 0 0 1 4-4h70a4 4 0 0 1 4 4v32"/><path d="M84 22h22l16 14v10h-4M84 46h12M6 46h10M36 46h42"/><path d="M18 20h50v14H18z"/><path d="M14 20l6-6h46l6 6"/><path d="M98 26h7l9 9h-16z"/><circle cx="26" cy="48" r="7"/><circle cx="106" cy="48" r="7"/></svg>
+      </div>
+      <div class="foot__text">
+        <nav class="foot__nav" aria-label="Footer">
+          <a href="#menu">Menu</a><a href="#truck">The truck</a><a href="#find">Find us</a><a href="https://www.instagram.com/the_farmer_bistro_/" target="_blank" rel="noopener">Instagram</a><a href="#top">Back to top</a>
+        </nav>
+        <p><strong>Design demonstration.</strong> This is a concept website prepared for The Farmer Bistro. It is not the business's official site, and nothing on it takes orders, payments or bookings.</p>
+        <p>The burger, fries, chicken strips, cola and packaging in the scroll story are AI-generated demo artwork (Higgsfield), not photos of the Bistro's portions; the logo on the box was added from the Bistro's own sign. Chicken strips appear in the artwork only. Menu items and prices come from the Bistro's Instagram menu posted on 4 October 2025 and still need confirming. Truck and burger photos come from the Bistro's public listings. The name, logo and artwork belong to The Farmer Bistro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

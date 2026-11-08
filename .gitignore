@@ -1,0 +1,14 @@
+node_modules/
+dist/
+blender/out/
+blender/*.blend1
+research/work/
+*.log
+.env*
+qa/*.png
+qa/*.json
+.vercel/
+
+.before/
+.before-dist/
+assets/higgsfield/bridge/frames/
